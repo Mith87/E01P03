@@ -1,0 +1,12 @@
+
+#nb_search .magnifyingglass {
+    width: 16px;
+    height: 18px;
+    background-position: -43px 0px;
+}
+.navbarSprite {
+    background-color: transparent;
+    background-image: url(http://i.media-imdb.com/images/navbar/navbar_sprite.png);
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+}

@@ -2,52 +2,29 @@
 angular.module('mymovie', [])
     .factory('myMovieSearch', ['$http', function($http) {
 
-        var URL_REQUEST =  'http://mymovieapi.com/?type=jsonp;'+
-                           'parameters';
+        this.id = 0;
+        this.title = 'Gone with the Wind';
+
+        var API_KEY = "6xbxza6dw37gt25ue9s6ttjg";
+        var URL_BASE = "http://api.rottentomatoes.com/api/public/v1.0";
 
         return {
-            fetchByName: fetchByTitle,
+            fetchByTitle: fetchByTitle,
             fetchById: fetchById
         };
 
-        function fetchByTitle(){
-            URL_REQUEST.replace('parameters',
-                'q='+title+';'+
-                'year='+year+ ';'+
-                'yg='+yg+ ';'+
-                'mt='+mt+ ';'+
-                'plot='+plot+';'+
-                'episode' +episode+ ';'+
-                'offset='+offset+ ';'+
-                'limit='+limit+ ';'+
-                'lang' +lang+ ';'+
-                'aka' +aka+ ';'+
-                'release' +release+ ';'+
-                'business' +business+ ';'+
-                'tech' +tech+ ';');
-
-            return fetchData();
+        function fetchByTitle(callback){
+            var urlRequest = URL_BASE + '/movies.json?apikey=' + API_KEY + '&q=' + title;
+            return fetchData(urlRequest, callback);
         };
 
-        function fetchById(){
-            debugger;
-            URL_REQUEST.replace('parameters',
-                'id='+id+';'+
-                'plot='+plot+';'+
-                'episode' +episode+ ';'+
-                'lang' +lang+ ';'+
-                'aka' +aka+ ';'+
-                'release' +release+ ';'+
-                'business' +business+ ';'+
-                'tech' +tech+ ';');
-
-            return fetchData();
+        function fetchById(callback){
+            var urlRequest = URL_BASE + '/movies/'+id+'.json?apikey=' + API_KEY;
+            return fetchData(urlRequest, callback);
         };
 
-        function fetchData(){
-            return $http.jsonp(URL_REQUEST).success(function(data) {
-
-            });
+        function fetchData(urlRequest, callback){
+            return $http.jsonp(urlRequest+'&callback=JSON_CALLBACK').success(callback);
         };
 
     }]);
