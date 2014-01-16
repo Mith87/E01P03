@@ -6,11 +6,11 @@ angular.module('mymovie', [])
                            'parameters';
 
         return {
-            fetchByName: fetchByName,
+            fetchByName: fetchByTitle,
             fetchById: fetchById
         };
 
-        function fetchByName(){
+        function fetchByTitle(){
             URL_REQUEST.replace('parameters',
                 'q='+title+';'+
                 'year='+year+ ';'+
