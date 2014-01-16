@@ -30,6 +30,7 @@ angular.module('mymovie', [])
         };
 
         function fetchById(){
+            debugger;
             URL_REQUEST.replace('parameters',
                 'id='+id+';'+
                 'plot='+plot+';'+
