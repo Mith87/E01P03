@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="search">
+    <head>
+        <title>MyMovie Search</title>
+        <script src="http://code.angularjs.org/1.2.8/angular.min.js"></script>
+        <script src="search.js"></script>
+        <script src="mymovie.js"></script>
+    </head>
+    <body>
+        <div ng-controller="SearchController as search">
+            <div>
+                <legend>Search: By Title</legend>
+                <div>
+                    Title: 	  <input type="text" ng-model="search.title" >
+                    Plot: 	  <select><option ng-repeat="c in search.plot">{{c}}</option></select>
+					YG: 	  <select><option ng-repeat="c in search.yg">{{c}}</option></select>
+					MT: 	  <select><option ng-repeat="c in search.mt">{{c}}</option></select>
+					Limit: 	  <select><option ng-repeat="c in search.limit">{{c}}</option></select>
+				</div>
+                <div>
+                    Year: 	  <input type="text" ng-model="search.year" >
+                    Offset:   <input type="number" ng-model="search.offset" >
+					Lang: 	  <select><option ng-repeat="c in search.lang">{{c}}</option></select>
+					AKA: 	  <select><option ng-repeat="c in search.aka">{{c}}</option></select>
+					Release:  <select><option ng-repeat="c in search.release">{{c}}</option></select>
+                </div>
+                <div>
+					Business: <select><option ng-repeat="c in search.business">{{c}}</option></select>
+					Tech:	  <select><option ng-repeat="c in search.tech">{{c}}</option></select>
+                </div>
+            </div>
+            <div>
+				<legend>Search: By ID</legend>
+            </div>
+        </div>
+    </body>
+</html>
