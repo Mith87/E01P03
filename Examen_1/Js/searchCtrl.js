@@ -12,13 +12,6 @@ angular.module('search', ['mymovie'])
                 html = '';
                 this.movies = data.movies;
                 angular.forEach(data.movies, function(movie){
-                    /*html += '<tr>';
-                    html += '<td><img height="150" width="100" src="' + movie.posters.profile + '" class="img-circle" /></td>';
-                    html += '<td>' + movie.title +'</td>';
-                    html += '<td>' + movie.year +'</td>';
-                    html += '</tr>';
-					*/
-					
 					html += '<div class="row-fluid">';
 						html += '<div class="span2 imgMovie">';
 							html += '<img height="150" width="100" src="' + movie.posters.profile + '" class="img-circle" />';
