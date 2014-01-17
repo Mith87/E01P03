@@ -10,3 +10,65 @@
     background-attachment: scroll;
     background-repeat: no-repeat;
 }
+
+body{
+    margin:0px;
+    background-color: #C0C0C0 !important;
+}
+.header-cont {
+    width:100%;
+    top:0px;
+}
+.header {
+    border:1px solid #CCC;
+    background: #333333;
+    background: -webkit-linear-gradient(top, #646464 0%,#0e0e0e 100%);
+    background: -ms-linear-gradient(top, #646464 0%,#0e0e0e 100%);
+    background: linear-gradient(to bottom, #646464 0%,#0e0e0e 100%);
+    border-top: 1px solid #444444;
+    color: #fff;
+    font: 10pt Verdana, Arial, sans-serif;
+    height: 83px;
+    margin: 2px auto auto 195px;
+    padding: 0;
+    position: relative;
+    width: 960px;
+    z-index: 200;
+}
+
+.header img
+{
+    background: #333333 url("../Images/imdb.PNG") no-repeat;
+    margin:16px;
+    border-radius: 14px;
+    -webkit-border-radius: 14px;
+}
+
+.header h3
+{
+    margin: -56px 220px;
+}
+
+.content {
+    width:960px;
+    background: #F0F0F0;
+    border: 1px solid #CCC;
+    height: 85%;
+    margin: 4px auto;
+}
+
+.inputSearch{
+    border: none;
+    -moz-border-radius: 3px 0 0 3px;
+    -webkit-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+    -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4) inset;
+    -webkitz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4) inset;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4) inset;
+    font: 14px Verdana, Arial, sans-serif;
+    height: 19px;
+    padding: 15px 13px;
+    vertical-align: middle;
+    width: 500px;
+    margin: -72px 145px 36px;
+}

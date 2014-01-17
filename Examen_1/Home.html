@@ -3,15 +3,44 @@
 <head>
     <title>MyMovie Search</title>
     <script src="http://code.angularjs.org/1.2.8/angular.min.js"></script>
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="Js/searchCtrl.js"></script>
-    <script src="Js/myMovieSvc.js"></script>
+    <script src="Js/search.js"></script>
+    <script src="Js/mymovie.js"></script>
+    <link rel="stylesheet" href="Style/styleSearch.css" >
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://bootsnipp.com/css/bootsnipp.css?ver=b24db5c8391ec5c5d93cd0ac083acbdf">
 </head>
 <body>
-    <div ng-controller="SearchController as search">
-        <input type="text" size="80"/>
-        <button ng-click="search.fetch()">fetch</button><br>
-        <label>{{data}}</label>
+<div class="header">
+    <div class="header-cont">
+        <img src="Images/imdb.PNG" alt="">
+        <div class="controls">
+            <input id="iSearch" name="iSearch" type="text" placeholder="Search Movies, TV Shows, and more..." class="input-xlarge search-query inputSearch">
+            <button id="navbar-submit-button" class="primary btn" type="submit"><div class="magnifyingglass navbarSprite"></div></button>
+        </div>
     </div>
+</div>
+<div class="content">
+    <div ng-controller="SearchController as search">
+        <form class="form-horizontal">
+            <fieldset>
+                <div class="control-group">
+                    <label class="control-label" for="btnSearch"></label>
+                    <div class="controls">
+                        <button id="btnSearch" name="btnSearch" ng-click="search.fetch()" class="btn btn-primary">Buscar</button>
+                    </div>
+                </div>
+                <div>
+                    <table>
+                        <tr ng-repeat="movie in movies" ng-class="rowClass(person)">
+                            <td>{{ person.name }}</td>
+                        </tr>
+                    </table>
+                    {{search.data}}
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
 </body>
 </html>
