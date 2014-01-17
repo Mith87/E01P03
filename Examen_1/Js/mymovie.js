@@ -14,6 +14,7 @@ angular.module('mymovie', [])
         };
 
         function fetchByTitle(callback){
+            debugger;
             var urlRequest = URL_BASE + '/movies.json?apikey=' + API_KEY + '&q=' + title;
             return fetchData(urlRequest, callback);
         };
