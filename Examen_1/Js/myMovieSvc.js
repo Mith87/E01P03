@@ -10,9 +10,9 @@ angular.module('mymovie', [])
             fetchById: fetchById
         };
 
-        function fetchByTitle(title, callback){
+        function fetchByTitle(title, limit, callback){
 
-            var urlRequest = URL_BASE+'/movies.json?apikey='+API_KEY+'&q='+title;
+            var urlRequest = URL_BASE+'/movies.json?apikey='+API_KEY+'&q='+title+'&page_limit='+limit;
             fetchData(urlRequest, callback);
         }
 
