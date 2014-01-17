@@ -31,7 +31,7 @@ angular.module('search', ['mymovie'])
 					html += '</div>';
                 });
                 if(html != ''){
-                    document.getElementById("tableTest2").innerHTML = html;
+                    document.getElementById("divContainerMovies").innerHTML = html;
                 }
             });
         }
