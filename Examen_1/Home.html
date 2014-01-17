@@ -16,7 +16,12 @@
         <img src="Images/imdb.PNG" alt="">
         <div class="controls">
             <input id="iSearch" name="iSearch" type="text" ng-model="search.title" placeholder="Search Movies, TV Shows, and more..." class="input-xlarge search-query inputSearch">
-            <button id="navbar-submit-button" class="primary btn" type="submit"><div class="magnifyingglass navbarSprite"></div></button>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="btnSearch"></label>
+            <div class="controls">
+                <button id="btnSearch" name="btnSearch" ng-click="search.fetch()" class="btn btn-primary">Buscar</button>
+            </div>
         </div>
     </div>
 </div>
@@ -24,19 +29,12 @@
     <div>
         <form class="form-horizontal">
             <fieldset>
-                <div class="control-group">
-                    <label class="control-label" for="btnSearch"></label>
-                    <div class="controls">
-                        <button id="btnSearch" name="btnSearch" ng-click="search.fetch()" class="btn btn-primary">Buscar</button>
-                    </div>
-                </div>
                 <div>
                     <table class="bordered">
                         <thead>
-
                         <tr>
-                            <th>#</th>
-                            <th>IMDB Top 10 Movies</th>
+                            <th width="100"></th>
+                            <th>RottenTomatoes Top 20 Movies</th>
                             <th>Year</th>
                         </tr>
                         </thead>

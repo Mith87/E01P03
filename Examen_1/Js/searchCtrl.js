@@ -9,20 +9,19 @@ angular.module('search', ['mymovie'])
         this.movies;
         this.fetch = function() {
             myMovieSvc.fetchByTitle(this.title, this.limit, function(data){
+                html = '';
                 this.movies = data.movies;
-                document.getElementById("iSearch").value = this.movies[0].id;
                 angular.forEach(data.movies, function(movie){
                     html += '<tr>';
-                    html += '<td>' + movie.id +'</td>';
+                    html += '<td><img height="150" width="100" src="' + movie.posters.profile + '" /></td>';
                     html += '<td>' + movie.title +'</td>';
                     html += '<td>' + movie.year +'</td>';
                     html += '</tr>';
                 });
+                if(html != ''){
+                    document.getElementById("tableTest").innerHTML = html;
+                }
             });
-            debugger;
-            if(html != ''){
-                document.getElementById("tableTest").innerHTML = html;
-            }
         }
 
         this.rowClass = function(movie){
