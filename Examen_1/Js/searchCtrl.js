@@ -12,14 +12,33 @@ angular.module('search', ['mymovie'])
                 html = '';
                 this.movies = data.movies;
                 angular.forEach(data.movies, function(movie){
-                    html += '<tr>';
-                    html += '<td><img height="150" width="100" src="' + movie.posters.profile + '" /></td>';
+                    /*html += '<tr>';
+                    html += '<td><img height="150" width="100" src="' + movie.posters.profile + '" class="img-circle" /></td>';
                     html += '<td>' + movie.title +'</td>';
                     html += '<td>' + movie.year +'</td>';
                     html += '</tr>';
+					*/
+					
+					html += '<div class="row-fluid">';
+						html += '<div class="span2 imgMovie">';
+							html += '<img height="150" width="100" src="' + movie.posters.profile + '" class="img-circle" />';
+						html += '</div>';
+						html += '<div class="span8">';
+							html += '<h3>Movie Title: ' + movie.title + '</h3>';
+							html += '<h3>Year: ' + movie.year + '</h3>';
+						html += '</div>';
+						html += '<div class="span2 buttonAddFavorite">';
+							html +=	'<div class="btn-group">';
+								html +=	'<a class="btn dropdown-toggle btn-primary" data-toggle="dropdown" href="#">Action <span class="icon-cog icon-white"></span><span class="caret"></span></a>';
+								html += '<ul class="dropdown-menu">'
+										html += '<li><a href="#"><span class="glyphicon glyphicon-star"></span> Add to favorites</a></li>';
+								html += '</ul>';
+							html += '</div>';
+						html += '</div>';
+					html += '</div>';
                 });
                 if(html != ''){
-                    document.getElementById("tableTest").innerHTML = html;
+                    document.getElementById("tableTest2").innerHTML = html;
                 }
             });
         }
