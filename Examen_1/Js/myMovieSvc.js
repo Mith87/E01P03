@@ -7,12 +7,17 @@ angular.module('mymovie', [])
 
         return {
             fetchByTitle: fetchByTitle,
-            fetchById: fetchById
+            fetchById: fetchById,
+            fetchTop: fetchTop
         };
 
         function fetchByTitle(title, limit, callback){
 
             var urlRequest = URL_BASE+'/movies.json?apikey='+API_KEY+'&q='+title+'&page_limit='+limit;
+            fetchData(urlRequest, callback);
+        }
+        function fetchTop(title, limit, callback){
+            var urlRequest = URL_BASE+'/lists/dvds/top_rentals.json?apikey='+API_KEY+'&q='+title+'&page_limit='+limit;
             fetchData(urlRequest, callback);
         }
 
@@ -30,5 +35,4 @@ angular.module('mymovie', [])
                     console.log('error in fetchData');
                 });
             }
-
     }]);
