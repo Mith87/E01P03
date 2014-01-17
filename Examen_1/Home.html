@@ -31,12 +31,18 @@
                     </div>
                 </div>
                 <div>
-                    <table>
-                        <tr ng-repeat="movie in movies" ng-class="rowClass(person)">
-                            <td>{{ person.name }}</td>
+                    <table class="bordered">
+                        <thead>
+
+                        <tr>
+                            <th>#</th>
+                            <th>IMDB Top 10 Movies</th>
+                            <th>Year</th>
                         </tr>
+                        </thead>
+                        <tbody id="tableTest">
+                        </tbody>
                     </table>
-                    {{search.data}}
                 </div>
             </fieldset>
         </form>
