@@ -25,6 +25,7 @@ angular.module('search', ['mymovie'])
 								html +=	'<a class="btn dropdown-toggle btn-primary" data-toggle="dropdown" href="#">Action <span class="icon-cog icon-white"></span><span class="caret"></span></a>';
 								html += '<ul class="dropdown-menu">'
 										html += '<li><a href="#"><span class="glyphicon glyphicon-star"></span> Add to favorites</a></li>';
+										html += '<li><a target="_blank" href='+ movie.links.alternate + '><span class="glyphicon glyphicon-zoom-in"></span> More information</a></li>';
 								html += '</ul>';
 							html += '</div>';
 						html += '</div>';
