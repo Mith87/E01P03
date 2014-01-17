@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="search">
+<head>
+    <title>MyMovie Search</title>
+    <script src="http://code.angularjs.org/1.2.8/angular.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="Js/searchCtrl.js"></script>
+    <script src="Js/myMovieSvc.js"></script>
+</head>
+<body>
+    <div ng-controller="SearchController as search">
+        <input type="text" size="80"/>
+        <button ng-click="search.fetch()">fetch</button><br>
+        <label>{{data}}</label>
+    </div>
+</body>
+</html>
