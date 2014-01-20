@@ -13,7 +13,7 @@ angular.module('searchModule', ['myMovieModule', 'LocalStorageModule'])
         }
 
         $scope.fetchTop = function(limit) {
-            myMovieSvc.fetchTop('2013', '10', function(data){
+            myMovieSvc.fetchTop('2013', limit, function(data){
                 $scope.movies = data.movies;
             });
         }
