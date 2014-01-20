@@ -2,13 +2,15 @@
 <html ng-app="search">
 <head>
     <title>MyMovie Search</title>
+    <link rel="stylesheet" href="Style/styleSearch.css" >
+    <link rel="stylesheet" href="Style/bootstrap.min.css">
+    <link rel="stylesheet" href="Style/bootstrap-theme.min.css">
     <script src="http://code.angularjs.org/1.2.8/angular.min.js"></script>
     <script src="Js/searchCtrl.js"></script>
     <script src="Js/myMovieSvc.js"></script>
-    <link rel="stylesheet" href="Style/styleSearch.css" >
-    <link rel="stylesheet" href="Style/bootstrap.min.css">
-	<script type="text/javascript" src="Js/jquery.min.js"></script>
+    <script type="text/javascript" src="Js/jquery.min.js"></script>
 	<script type="text/javascript" src="Js/bootstrap.min.js"></script>
+
 </head>
 <body class="nhp" ng-controller="SearchController as search">
     <header class="clearfix" >
@@ -17,6 +19,21 @@
         </div>
         <input id="iSearch" name="iSearch" type="text" ng-model="title" placeholder="Search Movies, TV Shows, and more..." class="input-xlarge search-query inputSearch">
         <button id="btnSearch" name="btnSearch" ng-click="fetch()" class="btn btn-primary">Buscar</button>
+        <!-- Split button -->
+        <div class="btn-group">
+            <button type="button" class="btn btn-danger">Action</button>
+            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
     </header>
     <div class="content">
         <br><br>

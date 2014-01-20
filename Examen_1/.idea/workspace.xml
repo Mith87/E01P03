@@ -32,10 +32,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Home.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Home.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="45" selection-start="404" selection-end="404" vertical-scroll-proportion="5.8846154" vertical-offset="306" max-vertical-offset="850">
+            <state line="14" column="57" selection-start="629" selection-end="629" vertical-scroll-proportion="0.4375" vertical-offset="0" max-vertical-offset="1139">
               <folding />
             </state>
           </provider>
@@ -50,10 +50,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styleSearch.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="styleSearch.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Style/styleSearch.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="282" column="20" selection-start="7785" selection-end="7785" vertical-scroll-proportion="0.30017152" vertical-offset="4619" max-vertical-offset="5202">
+            <state line="282" column="20" selection-start="7785" selection-end="7785" vertical-scroll-proportion="0.0" vertical-offset="4619" max-vertical-offset="5202">
               <folding />
             </state>
           </provider>
@@ -84,11 +84,11 @@
         <option value="$PROJECT_DIR$/Search.html" />
         <option value="$PROJECT_DIR$/Js/search.js" />
         <option value="$PROJECT_DIR$/Login.html" />
-        <option value="$PROJECT_DIR$/Home.html" />
         <option value="$PROJECT_DIR$/Js/searchCtrl.js" />
         <option value="$PROJECT_DIR$/Js/myMovieSvc.js" />
         <option value="$PROJECT_DIR$/Style/styleSearch.css" />
         <option value="$PROJECT_DIR$/Style/styleLogin.css" />
+        <option value="$PROJECT_DIR$/Home.html" />
       </list>
     </option>
   </component>
@@ -379,16 +379,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Home.html">
+    <entry file="file://$PROJECT_DIR$/Login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="45" selection-start="404" selection-end="404" vertical-scroll-proportion="5.8846154" vertical-offset="306" max-vertical-offset="850">
+        <state line="8" column="30" selection-start="288" selection-end="288" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="714">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Login.html">
+    <entry file="file://$PROJECT_DIR$/Style/styleSearch.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="30" selection-start="288" selection-end="288" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="714">
+        <state line="282" column="20" selection-start="7785" selection-end="7785" vertical-scroll-proportion="0.0" vertical-offset="4619" max-vertical-offset="5202">
           <folding />
         </state>
       </provider>
@@ -400,9 +400,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Style/styleSearch.css">
+    <entry file="file://$PROJECT_DIR$/Home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="282" column="20" selection-start="7785" selection-end="7785" vertical-scroll-proportion="0.30017152" vertical-offset="4619" max-vertical-offset="5202">
+        <state line="14" column="57" selection-start="629" selection-end="629" vertical-scroll-proportion="0.4375" vertical-offset="0" max-vertical-offset="1139">
           <folding />
         </state>
       </provider>
