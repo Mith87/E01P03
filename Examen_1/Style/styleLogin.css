@@ -8,6 +8,7 @@ body{
     box-shadow: 4px 4px 13px 4px #888888;
     width: 700px !important;
     height: 300px;
+    margin: 1% auto auto 26% !important;
 }
 
 .clearfix:after
@@ -106,7 +107,7 @@ header .hlinks .text:active {
 
 @media screen and (min-width: 1025px) {
     .nhp header {
-        margin:15px;
+        margin: 0 1%;
         box-shadow: 0 1px 6px black;
     }
     section.contents {

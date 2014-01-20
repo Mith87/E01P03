@@ -42,7 +42,7 @@ body{
     background: #F0F0F0;
     border: 1px solid #CCC;
     height: auto;
-    margin: 4px auto;
+    margin: 9% auto;
 }
 
 .inputSearch{
@@ -194,6 +194,14 @@ background-color: red;
                           height: 87px;
                       }
 
+.clearfix{
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    margin: 0 1%;
+    width: 98%;
+}
+
 header {
     background-color: #B9090B;
     height: 87px;
@@ -272,7 +280,7 @@ header .hlinks .text:active {
 
 @media screen and (min-width: 1025px) {
     .nhp header {
-        margin:15px;
+        margin: 0 1%;
         box-shadow: 0 1px 6px black;
     }
     section.contents {
