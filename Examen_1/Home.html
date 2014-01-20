@@ -36,8 +36,8 @@
     </header>
     <div class="content">
         <br><br>
-        <div class="container-fluid well span6" id="divContainerMovies">
-            <div class="row-fluid" ng-init="fetchTop(10)" ng-repeat="movie in movies">;
+        <div class="container-fluid well span6" ng-init="fetchTop(10)">
+            <div class="row-fluid" ng-repeat="movie in movies">
                 <div class="span2 imgMovie">
                    <img height="150" width="100" src={{movie.posters.profile}} class="img-circle" />
                  </div>

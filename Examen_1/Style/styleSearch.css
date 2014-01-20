@@ -163,12 +163,13 @@ table {
 .imgMovie{
     float: left;
     padding-right: 12%;
+    margin-top: -2.5%;
 }
 
 .buttonAddFavorite
 {
 	float: right;
-	margin: -15% 2% 0 0;
+	margin: -15% -2% 0 0;
 }
 
 .menuFavorite:hover
