@@ -2,6 +2,7 @@
 <html ng-app="favorite">
 <head>
     <title>My Favorites</title>
+	<link rel="stylesheet" href="Style/styleFavorites.css" >
     <script src="Js/angular.min.js"></script>
     <script src="Js/myMovieSvc.js"></script>
     <script src="Js/showFavorite.js"></script>
@@ -10,15 +11,15 @@
 </head>
 <body ng-controller="FavoriteController">
         <h1>Favorites</h1>
-        <br><br>
-        <div class="content" ng-init="loadFavorites()">
-            <div class="container-fluid well span6">
-                <div class="row-fluid" ng-repeat="movie in movies track by $index">;
+        <div  ng-init="loadFavorites()">
+            <div id="divContainerMovies">
+                <div class="left" ng-repeat="movie in movies">
                     <div class="span2 imgMovie">
                         <img height="150" width="100" src={{movie.posters.profile}} class="img-circle" />
                     </div>
                     <div class="span8">
                         <h3>Movie Title: {{movie.title}}</h3>
+						<br>
                         <h3>Year: {{ movie.year }}</h3>
                     </div>
                 </div>

@@ -5,8 +5,7 @@ angular.module ('favorite',['LocalStorageModule'])
 
 
         $scope.loadFavorites = function(){
-            console.log(JSON.stringify(localStorageSvc.get('favorites')));
-            $scope.movies = angular.toJson(localStorageSvc.get('favorites'),true);
+            $scope.movies = localStorageSvc.get('favorites').movies;
         };
 
     }]);
