@@ -1,5 +1,5 @@
 
-angular.module('mymovie', [])
+angular.module('myMovieModule', [])
     .factory('myMovieSvc', ['$http', function($http) {
 
         var API_KEY = "6xbxza6dw37gt25ue9s6ttjg";
@@ -12,7 +12,6 @@ angular.module('mymovie', [])
         };
 
         function fetchByTitle(title, limit, callback){
-
             var urlRequest = URL_BASE+'/movies.json?apikey='+API_KEY+'&q='+title+'&page_limit='+limit;
             fetchData(urlRequest, callback);
         }
