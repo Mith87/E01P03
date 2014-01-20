@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="search">
+<html ng-app="searchModule">
 <head>
     <title>MyMovie Search</title>
     <link rel="stylesheet" href="Style/styleSearch.css" >
@@ -8,17 +8,18 @@
     <script src="Js/angular.min.js"></script>
     <script src="Js/searchCtrl.js"></script>
     <script src="Js/myMovieSvc.js"></script>
+    <script src="Js/angular-local-storage.js"></script>
     <script type="text/javascript" src="Js/jquery.min.js"></script>}
     <script type="text/javascript" src="Js/bootstrap.min.js"></script>
 
 </head>
-<body class="nhp" ng-controller="SearchController as search">
+<body class="nhp" ng-controller="SearchController">
     <header class="clearfix" >
         <div class="logo">
             <a href="#" title="Internet movie database"><span class="shim"></span><img src="Images/logoImdb.jpg" alt="Internet movie database" border="0"></a>
         </div>
         <input id="iSearch" name="iSearch" type="text" ng-model="title" placeholder="Search Movies, TV Shows, and more..." class="input-xlarge search-query inputSearch">
-        <button id="btnSearch" name="btnSearch" ng-click="fetch()" class="btn btn-primary">Buscar</button>
+        <button id="btnSearch" name="btnSearch" ng-click="fetch(10)" class="btn btn-primary">Buscar</button>
         <div class="span2 buttonUser">
             <div class="btn-group">
                 <button type="button" class="btn btn-primary">
@@ -36,7 +37,7 @@
     <div class="content">
         <br><br>
         <div class="container-fluid well span6" id="divContainerMovies">
-            <div class="row-fluid" ng-repeat="movie in movies">
+            <div class="row-fluid" ng-repear="fetchTop(10)"ng-repeat="movie in movies">;
                 <div class="span2 imgMovie">
                    <img height="150" width="100" src={{movie.posters.profile}} class="img-circle" />
                  </div>
@@ -52,7 +53,7 @@
                             <span class="caret"></span><span class="sr-only">Acciones</span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="#"><span class="glyphicon glyphicon-star"></span> Agregar a favoritos</a></li>
+                            <li><a ng-click="addFavorite(movie)"><span class="glyphicon glyphicon-star"></span> Add to favorites</a></li>
                             <li><a target="_blank" href={{movie.links.alternate}}><span class="glyphicon glyphicon-plus"></span> Mas informacion de la pelicula</a></li>
                         </ul>
                     </div>
