@@ -1,9 +1,12 @@
-angular.module ('favorite',['localStorageModule'])
-    .controller('FavoriteController', ['$scope', 'localStorageService', function($scope, localStorageService){
-        $scope.movies = '';
+angular.module ('favorite',['LocalStorageModule'])
+    .controller('FavoriteController', ['$scope', 'localStorageService' , function($scope, localStorageSvc){
+
+        $scope.movies;
+
 
         $scope.loadFavorites = function(){
-            $scope.movies = localStorage.getItem('favorites');
+            console.log(JSON.stringify(localStorageSvc.get('favorites')));
+            $scope.movies = angular.toJson(localStorageSvc.get('favorites'),true);
         };
 
     }]);

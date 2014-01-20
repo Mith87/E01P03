@@ -2,24 +2,27 @@
 <html ng-app="favorite">
 <head>
     <title>My Favorites</title>
-    <script src="http://code.angularjs.org/1.0.8/angular.min.js"></script>
+    <script src="Js/angular.min.js"></script>
+    <script src="Js/myMovieSvc.js"></script>
     <script src="Js/showFavorite.js"></script>
     <script src="Js/angular-local-storage.js"></script>
+
 </head>
-<body ng-controller="FavoriteController as favorite">
-    <div class="content" data-ng-init="favorite.loadFavorites()">
+<body ng-controller="FavoriteController">
+        <h1>Favorites</h1>
         <br><br>
-        <div class="container-fluid well span6" id="divContainerMovies">
-            <div class="row-fluid" ng-repeat="movie in favorite.movies">;
-                <div class="span2 imgMovie">
-                    <img height="150" width="100" src={{movie.posters.profile}} class="img-circle" />
-                </div>
-                <div class="span8">
-                    <h3>Movie Title: {{movie.title}}</h3>
-                    <h3>Year: {{ movie.year }}</h3>
+        <div class="content" ng-init="loadFavorites()">
+            <div class="container-fluid well span6">
+                <div class="row-fluid" ng-repeat="movie in movies track by $index">;
+                    <div class="span2 imgMovie">
+                        <img height="150" width="100" src={{movie.posters.profile}} class="img-circle" />
+                    </div>
+                    <div class="span8">
+                        <h3>Movie Title: {{movie.title}}</h3>
+                        <h3>Year: {{ movie.year }}</h3>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 </body>
 </html>
