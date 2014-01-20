@@ -1,4 +1,3 @@
-
 angular.module('searchModule', ['myMovieModule', 'LocalStorageModule'])
     .controller('SearchController', [ '$scope', 'myMovieSvc', 'localStorageService', function($scope, myMovieSvc, localStorageService) {
         debugger;
@@ -14,7 +13,7 @@ angular.module('searchModule', ['myMovieModule', 'LocalStorageModule'])
         }
 
         $scope.fetchTop = function(limit) {
-            myMovieSvc.fetchTop('2013', limit, function(data){
+            myMovieSvc.fetchTop('2013', '10', function(data){
                 $scope.movies = data.movies;
             });
         }
