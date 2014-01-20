@@ -1,3 +1,12 @@
+.titulo{
+    text-align: center;
+}
+
+body{
+    background-color: #D8D8D8
+}
+
+
 
 .left {
     float: left;
@@ -7,4 +16,5 @@
     border: 2px solid;
     text-align: center;
     margin: 10px;
+    background-color: #EFF2FB;
 }
