@@ -1,6 +1,6 @@
 
-angular.module('searchModule', ['myMovieModule'])
-    .controller('SearchController', [ '$scope', 'myMovieSvc', function($scope, myMovieSvc) {
+angular.module('searchModule', ['myMovieModule', 'LocalStorageModule'])
+    .controller('SearchController', [ '$scope', 'myMovieSvc', 'localStorageService', function($scope, myMovieSvc, localStorageService) {
         debugger;
         $scope.id = 0;
         $scope.title = '';
@@ -24,3 +24,14 @@ angular.module('searchModule', ['myMovieModule'])
         }
 
     }]);
+
+/*
+angular.module('favoritesModule', ['LocalStorageModule'])
+    .controller('FavoritesController', [ '$scope', 'LocalStorageService', function($scope, LocalStorageService) {
+
+        $scope.movies;
+
+
+
+    }]);
+*/

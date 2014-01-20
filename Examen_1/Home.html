@@ -8,6 +8,7 @@
     <script src="Js/angular.min.js"></script>
     <script src="Js/searchCtrl.js"></script>
     <script src="Js/myMovieSvc.js"></script>
+    <script src="Js/angular-local-storage.js"></script>
     <script type="text/javascript" src="Js/jquery.min.js"></script>
 	<script type="text/javascript" src="Js/bootstrap.min.js"></script>
 
@@ -50,7 +51,7 @@
                 <div class="btn-group">
                     <a class="btn dropdown-toggle btn-primary" data-toggle="dropdown" href="#">Action <span class="icon-cog icon-white"></span><span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#"><span class="glyphicon glyphicon-star"></span> Add to favorites</a></li>
+                        <li><a ng-click="addFavorite(movie)"><span class="glyphicon glyphicon-star"></span> Add to favorites</a></li>
                         <li><a target="_blank" href={{movie.links.alternate}}><span class="glyphicon glyphicon-plus"></span> More information</a></li>
                         </ul>
                     </div>
